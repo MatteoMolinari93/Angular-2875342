@@ -7,5 +7,5 @@
 </div>
 
 <ul class="user-list">
-  <li *ngFor="let user of (users | locationFilter: 0 : 3: 5)" class="user-list-item" [innerHTML]="user.name | highlightText: filter.value"></li>
+  <li *ngFor="let user of (users | async)" class="user-list-item" [innerHTML]="user.name | highlightText: filter.value"></li>
 </ul>
